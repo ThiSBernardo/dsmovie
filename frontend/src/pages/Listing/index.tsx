@@ -7,6 +7,7 @@ import { MoviePage } from "types/movie";
 
 function Listing() {
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [pageNumber, setPageNumber] = useState(0);
 
     const [page, setPage] = useState<MoviePage>({
