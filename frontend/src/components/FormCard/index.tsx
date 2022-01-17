@@ -12,7 +12,7 @@ type Props = {
 
 function FormCard({ movieID }: Props) {
 
-const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const [movie, setMovie] = useState<Movie>();
 
@@ -29,7 +29,7 @@ const navigate = useNavigate();
 
         const email = (event.target as any).email.value;
         const score = (event.target as any).score.value;
-
+     
         if (!validateEmail(email)) {
             return;
         }
@@ -45,9 +45,9 @@ const navigate = useNavigate();
             }
         }
 
-axios(config).then(response => {
-    navigate("/");
-})
+        axios(config).then(response => {
+            navigate("/");
+        }).catch(res => console.log(res))
     }
 
     return (
